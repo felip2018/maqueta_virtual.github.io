@@ -1,0 +1,21 @@
+.box {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  width: 50px;
+}
+
+.img_step {
+  width: 90%;
+  height: auto;
+}
+
+.loaderGif {
+  width: 150px;
+  height: 150px;
+}

@@ -1,0 +1,22 @@
+<p>Archivo seleccionado: </p>
+<strong>{{fileName}}</strong>
+<form id="file-upload-form" class="uploader">
+  <input id="file-upload" type="file" name="fileUpload" accept=".xlsx"
+  (change)="handleFile($event)"
+  />
+  <label for="file-upload" id="file-drag">
+    <img id="file-image" src="#" alt="Preview" class="hidden">
+    <div id="start">
+      <i class="fa fa-download" aria-hidden="true"></i>
+      <div>Seleccione o arrastre un archivo aquí</div>
+      <div id="notimage" class="hidden">Please select an image</div>
+      <span id="file-upload-btn" class="btn btn-primary">Seleccione un archivo</span>
+    </div>
+    <div id="response" class="hidden">
+      <div id="messages"></div>
+      <progress class="progress" id="file-progress" value="0">
+        <span>0</span>%
+      </progress>
+    </div>
+  </label>
+</form>

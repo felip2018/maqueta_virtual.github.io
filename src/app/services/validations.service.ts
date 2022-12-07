@@ -56,4 +56,17 @@ export class ValidationsService {
       return Number(element[evaluation.field]) === Number(evaluation.valor);
     }).length;
   }
+
+  public getSymbol(condition: string) {
+    return {
+      "mayor": ">",
+      "menor": "<",
+      "igual": "="
+    }[condition];
+  }
+
+  public renderValidation(evaluation: IEvaluation) {
+    return `<strong style="font-size: 15pt;">∃</strong> ${evaluation.resultado} estudiantes <strong style="font-size: 15pt;">∈</strong> curso : <strong style="font-size: 15pt;">P(${evaluation.field} ${this.getSymbol(evaluation.condition)} ${evaluation.valor})</strong>`;
+  }
+
 }

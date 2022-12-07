@@ -9,7 +9,7 @@
   </div>
   <div class="row justify-content-center">
     <div class="col-xs-12 col-sm-12 col-md-10">
-      <p class="lead">Seleccione las condiciones a evaluar</p>
+      <p class="lead">Reglas de diagnóstico</p>
       <div class="box">
         <textarea class="form-control" cols="30" rows="8" [(ngModel)]="conditions"></textarea>
       </div>
@@ -26,8 +26,7 @@
         </div>
         <div>
           <app-upload-file (sendData)="getDataFile($event)"></app-upload-file>
-          <!--<button class="btn btn-block btn-primary" [disabled]="!canStart" (click)="startProcess()">Iniciar</button>-->
-          <button class="btn btn-block btn-primary" (click)="startProcess()">Iniciar</button>
+          <button class="btn btn-block btn-primary" [disabled]="!canStart" (click)="startProcess()">Iniciar</button>
         </div>
       </div>
     </div>
@@ -61,6 +60,8 @@
     <div class="col-xs-12 col-sm-12 col-md-8">
       <div class="box">
         <p class="lead"><strong>Salida de datos</strong></p>
+        <div id="diagnosticDiv" style="text-align: left;" [innerHTML]="diagnosticHtml">
+        </div>
       </div>
     </div>
   </div>
